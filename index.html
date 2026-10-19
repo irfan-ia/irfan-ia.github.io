@@ -17,6 +17,7 @@
       <a class="wide" href="#features">Features</a>
       <a class="wide" href="#mobile">Mobile app</a>
       <a class="wide" href="#price">Price</a>
+      <a class="wide" href="#custom">Custom software</a>
       <a href="privacy.html">Privacy</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -121,10 +122,51 @@
   </div>
 </section>
 
+<section id="custom">
+  <div class="wrap">
+    <h2>Software made for your business</h2>
+    <p class="lead">Not a shop? We design and build custom software for any kind of business — on the same proven foundation that powers Saudagar POS. Tell us how you work, and we build it around you.</p>
+    <div class="grid four">
+      <div class="card mini"><div class="ic">🐄</div><h3>Dairy farms</h3><p>Animals, milk records, collection and payments.</p></div>
+      <div class="card mini"><div class="ic">🐔</div><h3>Poultry farms</h3><p>Flocks, feed, mortality, sales and profit per flock.</p></div>
+      <div class="card mini"><div class="ic">🎓</div><h3>Schools &amp; academies</h3><p>Students, fees, attendance and results.</p></div>
+      <div class="card mini"><div class="ic">🏭</div><h3>Factories</h3><p>Raw material, production, orders and workers.</p></div>
+      <div class="card mini"><div class="ic">🛒</div><h3>Marts &amp; stores</h3><p>Barcode billing, many counters, branches.</p></div>
+      <div class="card mini"><div class="ic">🚚</div><h3>Distribution</h3><p>Order booking, routes, delivery and recovery.</p></div>
+      <div class="card mini"><div class="ic">💊</div><h3>Pharmacies &amp; clinics</h3><p>Medicines, batches, expiry and patients.</p></div>
+      <div class="card mini"><div class="ic">✨</div><h3>Your idea</h3><p>Any business process, built the way you need it.</p></div>
+    </div>
+
+    <div class="two" style="margin-top:40px">
+      <div>
+        <h3 class="sub">Every system we build includes</h3>
+        <ul class="check">
+          <li>Desktop software with a matching Android app</li>
+          <li>Works offline and syncs in seconds</li>
+          <li>Staff logins, roles and an activity log</li>
+          <li>Automatic backups, including your own Google Drive</li>
+          <li>Printable reports and WhatsApp sharing</li>
+          <li>Installation, training and ongoing support</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="sub">How we work</h3>
+        <ol class="steps">
+          <li><b>Discuss</b> — we learn how your business runs today.</li>
+          <li><b>Plan &amp; quote</b> — a clear list of features, time and price.</li>
+          <li><b>Build &amp; review</b> — you see progress and give feedback.</li>
+          <li><b>Launch &amp; support</b> — we install, train your team and stay with you.</li>
+        </ol>
+        <a class="btn solid" href="#contact" onclick="pickCustom()">Discuss your project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="contact">
   <div class="wrap two">
     <div>
-      <h2>Book a free demo</h2>
+      <h2>Book a demo or discuss a project</h2>
       <p class="lead">Fill in this form and press <b>Send on WhatsApp</b>. Your details open in WhatsApp, ready to send to us. We usually reply the same day.</p>
       <div class="card">
         <div><b>Phone / WhatsApp:</b> <a href="tel:+923006537083">0300 6537083</a></div>
@@ -134,20 +176,21 @@
     </div>
     <form class="card form" id="demo">
       <label>Your name<input name="name" required autocomplete="name"></label>
-      <label>Shop name<input name="shop" required></label>
+      <label>Shop / business name<input name="shop" required></label>
       <label>City<input name="city" required autocomplete="address-level2"></label>
       <label>Phone<input name="phone" type="tel" inputmode="tel" placeholder="03xx xxxxxxx" autocomplete="tel"></label>
-      <label>Type of shop
+      <label>Type of business
         <select name="type">
           <option>Animal feed</option><option>Kiryana</option><option>Fertilizer &amp; seeds</option>
-          <option>Spare parts</option><option>General store</option><option>Wholesale</option><option>Other</option>
+          <option>Spare parts</option><option>General store</option><option>Wholesale</option><option>Other shop</option>
+          <option>Custom software (any business)</option>
         </select>
       </label>
       <label>Counters (computers)
         <select name="pcs"><option>1</option><option>2</option><option>3</option><option>4 or more</option></select>
       </label>
       <label class="tick"><input type="checkbox" name="mobile"> I want the mobile app too</label>
-      <label>Message (optional)<textarea name="msg" rows="3"></textarea></label>
+      <label>Message (optional — for custom software, tell us what you need)<textarea name="msg" rows="3"></textarea></label>
       <button class="btn solid" type="submit">Send on WhatsApp</button>
     </form>
   </div>
@@ -165,14 +208,15 @@
 </a>
 
 <script>
+function pickCustom(){ var t=document.querySelector('#demo select[name=type]'); t.value='Custom software (any business)'; }
 document.getElementById('y').textContent = new Date().getFullYear();
 document.getElementById('demo').addEventListener('submit', function (e) {
   e.preventDefault();
   var f = this, v = function (n) { return (f.elements[n].value || '').trim(); };
   var lines = [
-    'Assalam o Alaikum, I want a demo of Saudagar POS.',
+    (v('type').indexOf('Custom')===0 ? 'Assalam o Alaikum, I want custom software for my business.' : 'Assalam o Alaikum, I want a demo of Saudagar POS.'),
     'Name: ' + v('name'),
-    'Shop: ' + v('shop'),
+    'Business: ' + v('shop'),
     'City: ' + v('city'),
     v('phone') ? 'Phone: ' + v('phone') : '',
     'Type: ' + v('type'),
