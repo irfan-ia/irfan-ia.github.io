@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Saudagar — QR</title>
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+  :root{--brand:#14735C;--deep:#0B3F33;--ink:#13201C;--muted:#5A6B65}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;padding:20px;font-family:"Inter","Segoe UI",system-ui,Roboto,Arial,sans-serif;
+       background:linear-gradient(135deg,#1A8268,#0A3A2F);color:var(--ink)}
+  .card{width:100%;max-width:520px;background:#fff;border-radius:22px;padding:26px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+  .txt{font-size:22px;line-height:1.5;white-space:pre-wrap;word-break:break-word;margin:6px 0 20px}
+  .txt[dir=rtl]{font-size:26px}
+  button{width:100%;border:0;border-radius:12px;padding:14px;font:inherit;font-weight:700;font-size:16px;background:var(--brand);color:#fff;cursor:pointer}
+  .ok{background:#1D8048}
+  .foot{display:flex;align-items:center;gap:8px;justify-content:center;margin-top:18px;color:var(--muted);font-size:13px}
+  .foot img{width:22px;height:22px;border-radius:6px}
+  .foot a{color:var(--muted)}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div id="t" class="txt"></div>
+    <button id="c" type="button">Copy</button>
+    <div class="foot"><img src="logo.png" alt=""> Made with <a href="https://saudagarpos.com">Saudagar</a></div>
+  </div>
+<script>
+// Likhai sirf link ke "#" wale hisse mein — yeh website par nahi jati, sirf is phone par dikhti hai
+(function () {
+  var h = location.hash.slice(1), text = '';
+  try {
+    if (h.indexOf('b=') === 0) {
+      var b = h.slice(2).replace(/-/g, '+').replace(/_/g, '/'); while (b.length % 4) b += '=';
+      var bin = atob(b), bytes = new Uint8Array(bin.length);
+      for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+      text = new TextDecoder('utf-8').decode(bytes);
+    } else text = decodeURIComponent(h);
+  } catch (e) { text = ''; }
+  var t = document.getElementById('t');
+  t.textContent = text || 'Nothing to show.';
+  t.setAttribute('dir', 'auto');
+  document.getElementById('c').onclick = function () {
+    var btn = this;
+    (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(function () {
+      btn.textContent = 'Copied ✓'; btn.className = 'ok';
+    }, function () {
+      var r = document.createRange(); r.selectNodeContents(t); var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected — press Copy';
+    });
+  };
+})();
+</script>
+</body>
+</html>
