@@ -4,55 +4,144 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rabta — POS for Mobile Phone Shops</title>
-<meta name="description" content="Rabta is point-of-sale software for mobile phone shops: sale and purchase of new and used phones and accessories, IMEI record, stock, khata and reports — on the shop computer and on your phone.">
+<meta name="description" content="Rabta is point-of-sale software for mobile phone shops in Pakistan: sale and purchase of new and used phones and accessories, IMEI record, stock, khata, reports and backup — on the shop computer and on your phone.">
 <meta name="theme-color" content="#1E3A8A">
-<link rel="stylesheet" href="../style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="rabta.css">
 </head>
 <body>
 
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="index.html"><span class="rb-mark">R</span>Rabta</a>
-    <nav><a href="#features">Features</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+    <a class="logo" href="index.html"><span class="mark">R</span>Rabta</a>
+    <nav><a href="#features">Features</a><a href="#used">Used phones</a><a href="#faq">FAQ</a><a class="cta" href="index.html#contact">Contact</a></nav>
   </div>
 </header>
 
-<section class="rb-hero">
+<section class="hero">
   <div class="wrap">
-    <h1>Rabta — <em>POS for mobile phone shops</em></h1>
-    <p>Sell and buy new and used mobile phones and accessories, keep every IMEI on record, and know your stock, cash and khata at a glance — on the shop computer and on your phone.</p>
+    <div>
+      <div class="pill"><b>NEW</b> For mobile phone shops</div>
+      <h1>Every phone, every IMEI, <em>every rupee</em> — in one place.</h1>
+      <p>Rabta is the shop system for mobile dealers: sell and buy new and used phones, keep each IMEI on record, manage accessories stock, khata and cash — on the shop computer and on your phone.</p>
+      <div class="actions"><a class="btn sun" href="#contact">Get Rabta for your shop</a><a class="btn line" href="#features">See what it does</a></div>
+      <div class="chips"><span><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></svg> Works without internet</span><span><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></svg> Urdu-friendly</span><span><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></svg> Your data stays with you</span></div>
+    </div>
+    <div class="device" aria-hidden="true"><div class="screen">
+      <div class="sbar"><span>Rabta</span><span>Today</span></div>
+      <div class="sbody">
+        <div class="sc dark"><small>Today's sale</small><b>Rs 186,500</b><small>9 phones · 23 accessories</small></div>
+        <div class="sc">
+          <div class="srow"><div><b style="font-size:12px">Galaxy A15 · 128GB</b><small>IMEI 35 •••• 4417</small></div><span class="tag">NEW</span></div>
+          <div class="srow"><div><b style="font-size:12px">iPhone 11 · 64GB</b><small>IMEI 35 •••• 0932</small></div><span class="tag used">USED</span></div>
+          <div class="srow"><div><b style="font-size:12px">Redmi 13C</b><small>IMEI 86 •••• 2210</small></div><span class="tag">NEW</span></div>
+        </div>
+        <div class="sc"><div class="srow"><span>Cash</span><b style="font-size:13px">Rs 142,000</b></div><div class="srow"><span>Easypaisa</span><b style="font-size:13px">Rs 44,500</b></div></div>
+      </div>
+    </div></div>
   </div>
 </section>
 
-<main class="wrap">
-  <section id="features" class="rb-grid">
-    <div class="rb-card"><h3>New &amp; used phones</h3><p>Sale and purchase of new and second-hand phones, with the IMEI / serial number of every set.</p></div>
-    <div class="rb-card"><h3>Accessories &amp; stock</h3><p>Chargers, covers, handsfree and more — stock that updates with every sale and purchase.</p></div>
-    <div class="rb-card"><h3>Khata &amp; payments</h3><p>Customer and supplier accounts, credit, cash, bank and Easypaisa / JazzCash payments.</p></div>
-    <div class="rb-card"><h3>Mobile app</h3><p>See stock, sales and khata on your phone, and make entries away from the counter.</p></div>
-    <div class="rb-card"><h3>Reports</h3><p>Daily sale, profit, stock and cash reports for the owner.</p></div>
-    <div class="rb-card"><h3>Backup</h3><p>Backups on the shop computer, a USB drive, email, or your own Google Drive.</p></div>
-  </section>
+<section class="sec" id="features">
+  <div class="wrap">
+    <div class="center"><p class="kicker">Features</p><h2>Built for the way mobile shops work</h2>
+      <p class="lead">From the counter to the godown to your pocket — Rabta keeps phones, accessories and money in order.</p></div>
+    <div class="grid">
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></div><h3>New &amp; used phones</h3><p>Sale and purchase of new and second-hand sets with brand, model, storage, colour and condition.</p></div>
+      <div class="card"><div class="ic sun"><svg viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.3"/></svg></div><h3>IMEI record</h3><p>Every set is saved with its IMEI / serial number — find any phone in seconds: when it came, who bought it.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3>Accessories &amp; stock</h3><p>Chargers, covers, handsfree, LCDs and more. Stock updates with every sale, purchase and return.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M8 7h7M8 11h5"/></svg></div><h3>Khata &amp; payments</h3><p>Customer and supplier accounts, credit, cash, bank, Easypaisa and JazzCash — with WhatsApp reminders.</p></div>
+      <div class="card"><div class="ic sun"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h3>Profit &amp; reports</h3><p>Daily sale, profit per phone, stock value and cash reports for the owner.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M7 18a4.5 4.5 0 1 1 .9-8.9A6 6 0 0 1 19.5 11 3.5 3.5 0 0 1 18 18z"/></svg></div><h3>Safe backups</h3><p>Automatic backups on the computer, a USB drive, or your own Google Drive.</p></div>
+    </div>
+  </div>
+</section>
 
-  <section class="rb-sec">
-    <h2>Your data stays with you</h2>
-    <p class="lead">Rabta runs on the shop's own computer. Your sales, stock and customer records are kept there — not on our servers.
-      Google Drive backup is optional and can only touch the backup files Rabta creates. <a href="privacy.html">Read the privacy policy</a>.</p>
-    <ol class="rb-steps">
-      <li><b>Install</b> Rabta on the shop computer.</li>
-      <li><b>Add</b> your phones, accessories, customers and suppliers.</li>
-      <li><b>Sell and buy</b> at the counter or from the mobile app.</li>
-      <li><b>Back up</b> automatically — locally or to your own Google Drive.</li>
-    </ol>
-  </section>
-</main>
+<section class="sec band" id="used">
+  <div class="wrap two">
+    <div>
+      <p class="kicker">Used phones</p>
+      <h2>Buy a used phone with a proper record</h2>
+      <p class="lead">When a customer sells you a phone, Rabta keeps the shop's record in one place — and shows your real profit when you sell it on.</p>
+      <ul class="check">
+        <li>IMEI, model and condition of the set</li>
+        <li>Seller details kept as the shop's own record</li>
+        <li>Purchase price → sale price = profit on that phone</li>
+        <li>Search by IMEI any time</li>
+      </ul>
+    </div>
+    <div class="flow">
+      <div><b>Buy</b><span>Enter the phone, IMEI, condition and price.</span></div>
+      <div><b>Stock</b><span>It shows in stock as a used set, ready to sell.</span></div>
+      <div><b>Sell</b><span>Bill it at the counter or from the phone app.</span></div>
+      <div><b>Profit</b><span>See exactly what you earned on that set.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="center"><p class="kicker">Peace of mind</p><h2>Your shop, your data</h2></div>
+    <div class="trust">
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div><h3>Stays on your computer</h3><p>Sales, stock and customer records are kept on the shop’s own computer — not on our servers.</p></div>
+      <div class="card"><div class="ic sun"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M3 20a6 6 0 0 1 12 0M17 11a3 3 0 1 0 0-6M21 20a5 5 0 0 0-4-4.9"/></svg></div><h3>Staff with limits</h3><p>Each user sees only what their role allows. Important actions are logged.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M2 8.8a15 15 0 0 1 20 0M5 12.4a10 10 0 0 1 14 0M8.5 15.9a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1"/></svg></div><h3>Phone app</h3><p>Check stock and sales, make bills and take payments from your phone — in the shop or outside.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec band" id="faq">
+  <div class="wrap">
+    <div class="center"><p class="kicker">FAQ</p><h2>Questions shop owners ask</h2></div>
+    <div class="faq">
+      <details><summary>Does Rabta need internet?</summary><p>No. The shop works on its own computer without internet. Internet is needed only for Google Drive backup and for using the phone app away from the shop.</p></details>
+      <details><summary>Where is my data kept?</summary><p>On your shop's computer. We do not receive your sales, stock or customer records. See the <a href="privacy.html">Privacy Policy</a>.</p></details>
+      <details><summary>Can I keep the IMEI of every phone?</summary><p>Yes — every new and used set is saved with its IMEI / serial number, and you can search by it.</p></details>
+      <details><summary>What does Google Drive backup access?</summary><p>Only the backup files Rabta creates in your own Drive (and the email address of the connected account, shown on the Backup screen). Nothing else in your Google account.</p></details>
+      <details><summary>How do I get Rabta?</summary><p>Call or WhatsApp 0300 6537083, or email irfanmaqsood523@gmail.com. We install it and set it up for your shop.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="contact">
+      <div><h2>Want Rabta in your shop?</h2><p>Talk to us — we install it, add your products and train your staff.</p><p style="margin-top:14px;opacity:.75">Developed by Irfan Maqsood</p></div>
+      <div class="ways">
+        <a href="https://wa.me/923006537083" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>WhatsApp<small>0300 6537083</small></span></a>
+        <a href="tel:+923006537083"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>Call<small>0300 6537083</small></span></a>
+        <a href="mailto:irfanmaqsood523@gmail.com"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Email<small>irfanmaqsood523@gmail.com</small></span></a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="wrap">
-    <div>© 2026 Rabta · Irfan Maqsood</div>
-    <div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div>
+    <div class="cols">
+      <div>
+        <div class="brand"><span class="mark" style="width:34px;height:34px;font-size:17px">R</span>Rabta</div>
+        <div>Point-of-sale software for mobile phone shops — new and used phones, accessories, IMEI record, stock and khata, on the computer and the phone.</div>
+      </div>
+      <div>
+        <h4>Rabta</h4>
+        <a href="index.html#features">Features</a><a href="index.html#used">Used phones</a><a href="index.html#faq">FAQ</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:irfanmaqsood523@gmail.com">irfanmaqsood523@gmail.com</a>
+        <a href="tel:+923006537083">0300 6537083</a>
+        <a href="https://wa.me/923006537083" target="_blank" rel="noopener">WhatsApp 0300 6537083</a>
+      </div>
+    </div>
+    <div class="bottom">
+      <div>© 2026 Rabta · Developed by Irfan Maqsood · <a href="mailto:irfanmaqsood523@gmail.com" style="margin:0">irfanmaqsood523@gmail.com</a></div>
+      <div><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="../index.html">saudagarpos.com</a></div>
+    </div>
   </div>
 </footer>
+<a class="wa" href="https://wa.me/923006537083" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1-4.1A8 8 0 1 1 20 12z"/><path d="M9 9.5c.5 2 2 3.6 4 4.4l1.2-1.2 1.8.8-.4 1.8c-3.6.2-7-3.1-7-6.8l1.8-.4.8 1.8z"/></svg></a>
 </body>
 </html>
